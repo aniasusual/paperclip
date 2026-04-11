@@ -1,0 +1,107 @@
+{
+  "theme": "LIGHT",
+  "archetype": "4",
+  "archetype_name": "Swiss & High-Contrast (Organic Variant for Productivity)",
+  "rationale": "For a Notion-style Idea Logger, we need authority, clarity, and function-first UI (Swiss). However, a purely stark black-and-white feels too brutalist for personal ideation. We integrate Archetype 1 (Organic & Earthy) for warmth—using a warm off-white background and subtle gray borders to reduce cognitive load and evoke a calm, paper-like writing environment.",
+  "colors": {
+    "background": {
+      "main": "#F7F7F5",
+      "surface": "#FFFFFF",
+      "glass": "bg-white/70 backdrop-blur-xl"
+    },
+    "text": {
+      "primary": "#1C1B1A",
+      "secondary": "#706F6C",
+      "tertiary": "#A09E9A"
+    },
+    "borders": {
+      "light": "#E5E5E3",
+      "focus": "#D1D0CE"
+    },
+    "accents": {
+      "high_priority": {
+        "bg": "#FCE9E8",
+        "text": "#C7362E"
+      },
+      "medium_priority": {
+        "bg": "#FDF1DE",
+        "text": "#B26E12"
+      },
+      "low_priority": {
+        "bg": "#E4F0F7",
+        "text": "#2A72A5"
+      },
+      "primary_cta": {
+        "bg": "#1C1B1A",
+        "text": "#FFFFFF",
+        "hover": "#2C2B2A"
+      }
+    }
+  },
+  "typography": {
+    "font_family": {
+      "heading": "Outfit, sans-serif",
+      "body": "Work Sans, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "rules": {
+      "h1": "text-4xl sm:text-5xl tracking-tight font-medium text-[#1C1B1A]",
+      "h2": "text-2xl sm:text-3xl tracking-tight font-medium text-[#1C1B1A]",
+      "h3": "text-xl font-medium tracking-tight text-[#1C1B1A]",
+      "body": "text-base leading-relaxed text-[#1C1B1A]",
+      "small": "text-sm text-[#706F6C]",
+      "label": "text-xs font-semibold tracking-[0.05em] uppercase text-[#706F6C]"
+    }
+  },
+  "layout_spacing": {
+    "philosophy": "Generous spacing. Bento Grids for larger canvases, Control Room density for the list views.",
+    "container": "max-w-5xl mx-auto px-4 sm:px-6 lg:px-8",
+    "card_padding": "p-6 sm:p-8",
+    "grid": {
+      "main": "grid grid-cols-1 md:grid-cols-12 gap-6",
+      "sidebar": "md:col-span-3",
+      "content": "md:col-span-9"
+    },
+    "surfaces": {
+      "list_item": "border-b border-[#E5E5E3] py-4 hover:bg-[#F9F9F8] transition-colors cursor-pointer group",
+      "card": "bg-white border border-[#E5E5E3] rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#1C1B1A] text-white px-4 py-2 rounded-md font-medium hover:bg-[#2C2B2A] transition-colors focus:ring-2 focus:ring-[#E5E5E3] focus:ring-offset-2",
+      "secondary": "bg-white text-[#1C1B1A] border border-[#E5E5E3] px-4 py-2 rounded-md font-medium hover:bg-[#F7F7F5] transition-colors",
+      "ghost": "text-[#706F6C] hover:text-[#1C1B1A] hover:bg-[#F7F7F5] px-3 py-1.5 rounded-md transition-colors"
+    },
+    "inputs": {
+      "default": "w-full bg-white border border-[#E5E5E3] rounded-md px-4 py-2 text-base text-[#1C1B1A] placeholder:text-[#A09E9A] focus:outline-none focus:ring-2 focus:ring-[#D1D0CE] focus:border-transparent transition-all",
+      "search": "w-full bg-[#F7F7F5] border-none rounded-full px-5 py-2.5 text-base text-[#1C1B1A] placeholder:text-[#706F6C] focus:bg-white focus:ring-2 focus:ring-[#D1D0CE] transition-colors"
+    },
+    "tags": "inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium"
+  },
+  "motion": {
+    "hover": "transition-all duration-200 ease-out",
+    "list_stagger": "framer-motion with staggerChildren: 0.05",
+    "item_enter": "initial={opacity: 0, y: 10} animate={opacity: 1, y: 0}"
+  },
+  "icons": {
+    "library": "lucide-react",
+    "usage": "Use stroke-width 1.5 for a delicate, refined look matching the Notion style."
+  },
+  "images": {
+    "hero_background": "https://images.unsplash.com/photo-1737276746515-19ea864a6b80?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTN8MHwxfHNlYXJjaHwyfHxtaW5pbWFsaXN0JTIwdGV4dHVyZWQlMjBwYXBlciUyMGJhY2tncm91bmR8ZW58MHx8fHwxNzc1ODg3ODkwfDA&ixlib=rb-4.1.0&q=85",
+    "description": "Background texture is meant to be used at 10% opacity over the #F7F7F5 background if a textured feel is desired."
+  },
+  "testing": {
+    "data_testid_rules": "All interactive elements (buttons, inputs, links, list items) MUST have data-testid in kebab-case."
+  },
+  "instructions_to_main_agent": [
+    "Use standard HTML tags for layout and Shadcn components for complex interactions like Modals, Dropdowns, and Dialogs.",
+    "Do NOT use pure #000000 or #808080. Adhere strictly to the defined colors.",
+    "The Idea List should look clean and unboxed, similar to Notion's list view, using bottom borders to separate items instead of wrapping each in a heavy card.",
+    "Implement tags as small colored pills using the provided accent colors.",
+    "Maintain the layout with a left sidebar for categories and main content area for the list view.",
+    "Use framer-motion for smooth staggered list item entrance and layout animations on filtering.",
+    "Add 'lucide-react' for all iconography with strokeWidth={1.5}."
+  ]
+}
