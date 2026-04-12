@@ -4,7 +4,7 @@ import json
 from datetime import datetime
 
 class IdeaLoggerAPITester:
-    def __init__(self, base_url="https://idea-hub-273.preview.emergentagent.com/api"):
+    def __init__(self, base_url="https://concept-keeper-21.preview.emergentagent.com/api"):
         self.base_url = base_url
         self.tests_run = 0
         self.tests_passed = 0
